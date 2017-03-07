@@ -4,7 +4,7 @@ Getting started with Laravel
 Tips: The "$" symbol is a terminal command.
 
 # Starting new project:
- $ composer create-project laravel/laravel mobtasks "5.4.*"
+ $ composer create-project laravel/laravel project-name "5.4.*"
 
 # Executing project:
 $ php artisan serve
@@ -16,7 +16,7 @@ $ php artisan serve --host 0.0.0.0 --port 8000
 https://laravel.com/docs/5.4
 
 *PS: If Laravel Commando dont work, go to below tips:
-nano ~/.bash_profile 
+nano ~/.bash_profile
 And paste
 export PATH=~/.composer/vendor/bin:$PATH
 Restart the terminal and enjoy ;)
@@ -30,7 +30,7 @@ $ php artisan session:table
 # Troubleshooting: LARAVEL 5.4 - Erro SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes
 Solution: Go to: app/Providers/AppServiceProvider.php and insert:
 namespace App\Providers;
-use Illuminate\Support\Facades\Schema; 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
     public function boot()
     {
@@ -52,10 +52,10 @@ Reset the tables and rotate again.
 2) Create the customHelper.php in Helpers directory
 3) Into customHelper.php, insert the code like this:
 <?php
-if(!function_exists('function_name')){ 
+if(!function_exists('function_name')){
 	function function_name(){
 		//same code
-	} 
+	}
 }
 
 4) Open the composer.json file (on root project) and insert the "file" block:
@@ -68,7 +68,7 @@ if(!function_exists('function_name')){
              ]
         }
 
-5) Open the terminal/cmd and type: 
+5) Open the terminal/cmd and type:
  $ composer dump-autoload
 
 # View authorized routes:
@@ -91,8 +91,8 @@ protected $dates = ['deleted_at'];
 Create the field deleted_at in migration: $table->softDeletes();
 
 # @COMPONENTS & @SLOT:
-	Run in terminal/cmd: 
-	$ npm install 
+	Run in terminal/cmd:
+	$ npm install
 In the header, insert the css mix href {{mix ('css / app.css')}}
 If you use javascript from the bstrap, put in the footer {{mix ('js / app.js')}}
 Open terminal and run: npm run dev
@@ -141,4 +141,3 @@ OTHERS COMPONENTS:
                 @endslot
                 Message of alert component
             @endcomponent
-
