@@ -12,6 +12,8 @@ $ php artisan serve
 # Executing project with open ports (for others access):
 $ php artisan serve --host 0.0.0.0 --port 8000
 
+    *Now a new device in same network can connect to dev computer by ip address of the dev computer.
+
 # Documentation:
 https://laravel.com/docs/5.4
 
